@@ -1,0 +1,24 @@
+Library for picking the template based on a client in a multi-tenant platform.
+
+IE:  Shared controllers, customized views, with a different filepath per site.
+
+Useful for software as a service type hosted platforms.
+
+Example structure:
+
+app/
+  views/
+    articles/
+      show.html.haml # default template
+site_templates/
+  sitea/
+    articles/
+      show.html.haml # custom template
+
+Useage in controller:
+
+class ArticlesController < ActionController::Base
+  def show
+    render_for :article
+  end
+end
