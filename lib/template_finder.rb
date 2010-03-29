@@ -1,0 +1,6 @@
+require 'pathname'
+require 'template_finder/template'
+require 'template_finder/site_template'
+require 'template_finder/mapper'
+require 'template_finder/controller_methods'
+require 'template_finder/helper_methods'
